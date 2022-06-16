@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<script src="main.js" defer></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+		<title>JR Fitness & Health Academy</title>
+	</head>
+	<body>
+		<header>
+			<div class="heading">
+				<h1 class="title">JR Fitness & Health Academy</h1>
+			</div>
+			<div class="menu-btn">
+				<div class="menu-btn__burger"></div>
+			</div>
+			<nav class="mobile-nav">
+				<a href="#heading" class="nav-item">Home</a>
+				<a href="#workouts" class="nav-item">Workout Plans</a>
+				<a href="#meals" class="nav-item">Low Budget Meal Plans</a>
+				<a href="#results" class="nav-item">Results & Reviews</a>
+				<a href="#rules" class="nav-item">Rules to Life</a>
+				<a href="#contact" class="nav-item">Contact</a>
+			</nav>
+			<nav class="desktop-nav">
+				<a href="#heading" class="nav-item">Home</a>
+				<a href="#workouts" class="nav-item">Workout Plans</a>
+				<a href="#meals" class="nav-item">Low Budget Meal Plans</a>
+				<a href="#results" class="nav-item">Results & Reviews</a>
+				<a href="#rules" class="nav-item">Rules to Life</a>
+				<a href="#contact" class="nav-item">Contact</a>
+			</nav>
+		</header>
+		<main>
+			<section id="workouts">
+				<h2 class="section-heading" id="workouts-heading">
+					Workout Plans
+				</h2>
+
+				<button class="select-plan sign-up-today">
+					Sign Up Today!
+				</button>
+			</section>
+			<section id="meals">
+				<h2 class="section-heading" id="meals-heading">
+					Low Budget Meal Plans
+				</h2>
+
+				<button class="select-plan sign-up-today">
+					Sign Up Today!
+				</button>
+			</section>
+			<section id="results">
+				<h2 class="section-heading" id="results-heading">
+					Results & Reviews
+				</h2>
+
+				<button class="select-plan sign-up-today">
+					Sign Up Today!
+				</button>
+			</section>
+			<section id="rules">
+				<h2 class="section-heading" id="rules-heading">
+					Rules to Life
+				</h2>
+			</section>
+			<section id="contact">
+				<h2 class="section-heading" id="contact-heading">Contact</h2>
+			</section>
+		</main>
+		<div class="sign-up-modal">
+			<div class="sign-up-header">
+				<h2 class="sign-up-heading">Choose Your Plan</h2>
+				<span class="material-icons exit" style="font-size: 36px">
+					close
+				</span>
+			</div>
+			<form action="form.php" method="post" class="sign-up-form">
+				<h3 class="form-header">
+					Please select which plans you are interested in and enter
+					your details. We will contact you via your preferred method
+					within 24 hours.
+				</h3>
+				<div class="plan-selection">
+					<div class="workout-div checkbox-div">
+						<label for="workout-plan">Workout Plan:</label>
+						<input
+							type="checkbox"
+							name="workout-plan"
+							id="workout-plan"
+							class="checkbox"
+						/>
+					</div>
+					<div class="meals-div checkbox-div">
+						<label for="meal-plan">Meal Plan:</label>
+						<input
+							type="checkbox"
+							name="meal-plan"
+							id="meal-plan"
+							class="checkbox"
+						/>
+					</div>
+				</div>
+				<div class="details">
+					<div class="name-div details-divs">
+						<label for="name">Name:</label>
+						<input
+							type="text"
+							name="name"
+							id="name"
+							class="detail-input"
+							required
+						/>
+					</div>
+					<div class="email-div details-divs">
+						<label for="email">Email:</label>
+						<input
+							type="email"
+							name="email"
+							id="email"
+							class="detail-input"
+							required
+						/>
+					</div>
+					<div class="mobile-div details-divs">
+						<label for="mobile">Mobile:</label>
+						<input
+							type="tel"
+							name="mobile"
+							id="mobile"
+							class="detail-input"
+							minlength="10"
+							maxlength="12"
+							required
+						/>
+					</div>
+					<div class="description-div details-divs">
+						<label for="description"
+							>Please provide a brief description of your current
+							fitness goals:</label
+						>
+						<textarea
+							name="description"
+							id="description"
+							class="detail-input"
+							cols="30"
+							rows="10"
+							required
+						></textarea>
+					</div>
+				</div>
+				<footer class="form-footer">
+					<button class="select-plan">Sign Up</button>
+				</footer>
+			</form>
+		</div>
+	</body>
+</html>
