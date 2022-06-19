@@ -1,4 +1,5 @@
 :root {
+	overflow-x: hidden;
 	box-sizing: border-box;
 	font-family: 'Oswald', sans-serif;
 	--blue: #003180;
