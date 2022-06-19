@@ -1,14 +1,14 @@
 :root {
 	box-sizing: border-box;
 	font-family: 'Oswald', sans-serif;
-	--maroon: #800000;
-	--translucentMaroon: rgba(128, 0, 0, 0.8);
+	--blue: #003180;
+	--translucentBlue: #003180cc;
 	--white: white;
-	--translucentWhite: rgba(255, 255, 255, 0.5);
+	--translucentWhite: #ffffff80;
 	--black: black;
 	--gold: #daa520;
 	--navy: #000080;
-	--grey: rgb(199, 199, 199);
+	--grey: #c7c7c7;
 }
 
 body {
@@ -52,7 +52,7 @@ h1 {
 .menu-btn__burger {
 	width: 30px;
 	height: 5px;
-	background-color: var(--maroon);
+	background-color: var(--blue);
 	border-radius: 5px;
 	box-shadow: 0 2px 5px var(--grey);
 	transition: all 0.3s ease-in-out;
@@ -64,7 +64,7 @@ h1 {
 	position: absolute;
 	width: 30px;
 	height: 5px;
-	background-color: var(--maroon);
+	background-color: var(--blue);
 	border-radius: 5px;
 	box-shadow: 0 2px 5px var(--grey);
 	transition: all 0.3s ease-in-out;
@@ -103,12 +103,7 @@ h1 {
 	z-index: 2;
 	width: 100%;
 	height: 100%;
-	background: linear-gradient(
-		to right,
-		rgba(128, 0, 0, 0.8),
-		70%,
-		rgba(255, 255, 255, 0.5)
-	);
+	background: linear-gradient(to right, #003180cc, 70%, #ffffff80);
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
@@ -125,12 +120,7 @@ h1 {
 	z-index: 2;
 	width: 100%;
 	height: 100%;
-	background: linear-gradient(
-		to right,
-		rgba(128, 0, 0, 0.8),
-		75%,
-		rgba(255, 255, 255, 0.5)
-	);
+	background: linear-gradient(to right, #003180cc, 70%, #ffffff80);
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
@@ -176,30 +166,51 @@ section {
 	border: none;
 	font-weight: 700;
 	font-size: 1.2rem;
+	margin: 1rem;
 }
 
-#workouts {
-	background-color: var(--maroon);
+#wcidfy {
+	background-color: var(--blue);
 	color: var(--white);
 	width: 100%;
 }
 
-#meals {
-	background-color: var(--white);
-	color: var(--maroon);
+#socials {
 	width: 100%;
 }
 
 #results {
-	background-color: var(--navy);
+	background-color: var(--blue);
 	color: var(--white);
 	width: 100%;
 }
 
-#rules {
+/*#rules {
 	background-color: var(--black);
 	color: var(--gold);
 	width: 100%;
+}*/
+
+.main-paras {
+	text-align: left;
+	font-size: 1.4rem;
+	padding: 0 1.5rem;
+}
+
+.socials-text,
+.contact-text {
+	text-align: center;
+}
+
+.social-icon {
+	margin: 1rem;
+	width: 3rem;
+	transition: all 0.1s linear;
+}
+
+.social-icon:hover {
+	margin-top: -1rem;
+	width: 4rem;
 }
 
 .sign-up-today {
@@ -216,7 +227,7 @@ section {
 	top: 0;
 	left: 0;
 	width: 100%;
-	background-color: var(--translucentMaroon);
+	background-color: var(--translucentBlue);
 	color: var(--white);
 	display: flex;
 	flex-direction: column;
@@ -242,8 +253,10 @@ section {
 }
 
 form {
+	margin-top: -3rem;
 	padding: 1.5rem;
 	font-size: 1.4rem;
+	max-width: 450px;
 }
 
 .form-header {
@@ -261,7 +274,7 @@ form {
 	display: flex;
 	align-items: baseline;
 	justify-content: space-between;
-	width: 40vw;
+	width: 9rem;
 }
 
 .details-divs,
@@ -300,21 +313,25 @@ form {
 	.desktop-nav {
 		width: 100%;
 		display: flex;
-		justify-content: space-between;
+		justify-content: space-evenly;
 		background-color: var(--white);
-		border: 2px solid var(--maroon);
+		border: 2px solid var(--blue);
 		border-left: none;
 		border-right: none;
 	}
 
 	.nav-item {
 		margin: 0;
-		color: var(--maroon);
+		color: var(--blue);
 	}
 
 	.nav-item:hover,
 	.nav-item:active {
-		background-color: var(--maroon);
+		background-color: var(--blue);
 		color: var(--white);
+	}
+
+	.sign-up-modal {
+		width: 750px;
 	}
 }
