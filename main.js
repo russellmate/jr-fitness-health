@@ -2,8 +2,8 @@
 const menuBtn = document.querySelector('.menu-btn');
 const mobileNav = document.querySelector('.mobile-nav');
 const main = document.querySelector('main');
-const navItem = document.querySelectorAll('.nav-item');
 const header = document.querySelector('header');
+const navItem = document.querySelectorAll('.nav-item');
 const html = document.querySelector('html');
 
 let menuOpen = false;
@@ -13,6 +13,7 @@ menuBtn.addEventListener('click', () => {
 		menuBtn.classList.add('open');
 		mobileNav.classList.add('open');
 		main.classList.add('open');
+		document.body.scrollIntoView();
 		html.style.overflow = 'hidden';
 		menuOpen = true;
 	} else {
@@ -46,12 +47,21 @@ selectPlan.forEach(item =>
 			planModal.classList.add('open');
 			main.classList.add('open');
 			header.classList.add('open');
+			document.body.scrollIntoView();
 			modalOpen = true;
 		} else {
 			planModal.classList.remove('open');
 			main.classList.remove('open');
 			header.classList.remove('open');
 			modalOpen = false;
+		}
+
+		if (menuOpen) {
+			menuBtn.classList.remove('open');
+			mobileNav.classList.remove('open');
+			main.classList.add('open');
+			html.style.overflow = 'auto';
+			menuOpen = false;
 		}
 	})
 );
