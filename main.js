@@ -12,15 +12,13 @@ menuBtn.addEventListener('click', () => {
 	if (!menuOpen) {
 		menuBtn.classList.add('open');
 		mobileNav.classList.add('open');
-		main.classList.add('open');
-		document.body.scrollIntoView();
 		html.style.overflow = 'hidden';
 		menuOpen = true;
 	} else {
 		menuBtn.classList.remove('open');
 		mobileNav.classList.remove('open');
-		main.classList.remove('open');
 		html.style.overflow = 'auto';
+		html.style.overflowX = 'hidden';
 		menuOpen = false;
 	}
 });
@@ -45,23 +43,20 @@ selectPlan.forEach(item =>
 	item.addEventListener('click', () => {
 		if (!modalOpen) {
 			planModal.classList.add('open');
-			main.classList.add('open');
-			header.classList.add('open');
 			document.body.scrollIntoView();
 			modalOpen = true;
 		} else {
 			planModal.classList.remove('open');
-			main.classList.remove('open');
-			header.classList.remove('open');
 			modalOpen = false;
 		}
 
 		if (menuOpen) {
+			planModal.classList.add('open');
 			menuBtn.classList.remove('open');
 			mobileNav.classList.remove('open');
-			main.classList.add('open');
 			html.style.overflow = 'auto';
 			menuOpen = false;
+			modalOpen = true;
 		}
 	})
 );

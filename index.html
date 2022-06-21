@@ -82,25 +82,33 @@
 					Follow the links below to connect with me on socials:
 				</p>
 				<div class="social-icons">
-					<a href=""
+					<a
+						href="https://www.instagram.com/joer_health_fitness/"
+						target="_blank"
 						><img
 							src="images/instagram-11.svg"
 							alt="Instagram logo"
 							class="social-icon"
 					/></a>
-					<a href=""
+					<a
+						href="https://www.instagram.com/j.russell19/"
+						target="_blank"
 						><img
 							src="images/instagram-11.svg"
 							alt="Instagram logo"
 							class="social-icon"
 					/></a>
-					<a href=""
+					<a
+						href="https://discord.com/invite/2z567F9P"
+						target="_blank"
 						><img
 							src="images/discord-1.svg"
 							alt="Discord logo"
 							class="social-icon"
 					/></a>
-					<a href=""
+					<a
+						href="https://www.facebook.com/joseph.russell.560"
+						target="_blank"
 						><img
 							src="images/facebook-6.svg"
 							alt="Facebook logo"
@@ -138,10 +146,52 @@
 			</section>-->
 			<section id="contact">
 				<h2 class="section-heading" id="contact-heading">Contact Me</h2>
-				<p class="main-paras contact-text">
-					Please fill out the contact form below and I will get in
-					touch ASAP:
-				</p>
+				<form action="" method="post" class="contact-form">
+					<p class="main-paras contact-text">
+						Please fill out the contact form below and I will get in
+						touch ASAP:
+					</p>
+					<div class="name-div details-divs">
+						<label for="name">First Name:</label>
+						<input
+							type="text"
+							name="name"
+							id="name"
+							class="detail-input contact-input"
+							required
+						/>
+					</div>
+					<div class="description-div details-divs">
+						<label for="description"
+							>Reason for getting in touch:</label
+						>
+						<textarea
+							name="description"
+							id="description"
+							class="detail-input contact-input"
+							cols="30"
+							rows="10"
+							required
+						></textarea>
+					</div>
+					<div class="mobile-div details-divs">
+						<label for="timw">Best time to call:</label>
+						<input
+							type="time"
+							name="time"
+							id="time"
+							class="detail-input contact-input"
+							minlength="10"
+							maxlength="12"
+							required
+						/>
+					</div>
+					<footer class="form-footer">
+						<button class="select-plan sign-up-today">
+							Submit
+						</button>
+					</footer>
+				</form>
 			</section>
 		</main>
 		<div class="sign-up-modal">
