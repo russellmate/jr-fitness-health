@@ -71,3 +71,43 @@ exit.addEventListener('click', () => {
 		modalOpen = true;
 	}
 });
+
+// header scroll
+const logo = document.querySelector('.title');
+
+window.onscroll = function () {
+	scrollFunction();
+};
+if (window.innerWidth < 750) {
+	function scrollFunction() {
+		if (
+			document.body.scrollTop > 100 ||
+			document.documentElement.scrollTop > 100
+		) {
+			header.style.height = '7rem';
+			main.style.marginTop = '7rem';
+			logo.style.width = '7rem';
+		} else {
+			header.style.height = '12rem';
+			main.style.marginTop = '11rem';
+			logo.style.width = '12rem';
+		}
+	}
+} else {
+	function scrollFunction() {
+		if (
+			document.body.scrollTop > 100 ||
+			document.documentElement.scrollTop > 100
+		) {
+			header.style.height = '8rem';
+			main.style.marginTop = '8rem';
+			logo.style.width = '7rem';
+		} else {
+			header.style.height = '19rem';
+			main.style.marginTop = '19rem';
+			logo.style.width = '15rem';
+		}
+	}
+}
+
+// window reload on size change
