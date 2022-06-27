@@ -22,7 +22,7 @@ body {
 header {
 	width: 100%;
 	opacity: 1;
-	transition: all 0.2s linear;
+	transition: all 0.1s linear;
 	position: fixed;
 	top: 0;
 	background-color: var(--white);
@@ -38,7 +38,7 @@ header.open {
 }
 
 .title {
-	transition: all 0.2s linear;
+	transition: all 0.1s linear;
 	width: 12rem;
 }
 
@@ -159,7 +159,7 @@ main {
 	align-items: center;
 	opacity: 1;
 	transition: opacity 0.3s linear;
-	transition: margin-top 0.2s linear;
+	transition: margin-top 0.1s linear;
 	margin-top: 11rem;
 	overflow-x: hidden;
 }
@@ -169,18 +169,7 @@ section {
 	text-align: center;
 	box-shadow: #0000003d 0px 3px 8px;
 	width: 100%;
-}
-
-.select-plan {
-	cursor: pointer;
-	padding: 0.5rem 1rem;
-	background-color: var(--gold);
-	color: var(--white);
-	border: none;
-	font-weight: 700;
-	font-size: 1.2rem;
-	margin: 1rem;
-	transition: all 0.1s linear;
+	scroll-margin-top: 11rem;
 }
 
 #wcidfy {
@@ -193,10 +182,21 @@ section {
 	color: var(--white);
 }
 
+.subject-pics {
+	width: 80%;
+	margin: 0.5rem 0;
+	border: none;
+	border-radius: 0.3rem;
+	box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+		rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+		rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
 #contact {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	width: 100vw;
 }
 
 .main-paras {
@@ -220,6 +220,15 @@ section {
 	margin-bottom: 0.5rem;
 	box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
 		rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+	cursor: pointer;
+	padding: 0.5rem 1rem;
+	background-color: var(--gold);
+	color: var(--white);
+	border: none;
+	font-weight: 700;
+	font-size: 1.2rem;
+	margin: 1rem;
+	transition: all 0.1s linear;
 }
 
 .contact-form {
@@ -342,6 +351,12 @@ form {
 		border: 2px solid var(--blue);
 		border-left: none;
 		border-right: none;
+		opacity: 1;
+		transition: opacity 1s linear;
+	}
+
+	.desktop-nav.open {
+		opacity: 0.1;
 	}
 
 	.nav-item {
@@ -360,9 +375,26 @@ form {
 		margin-top: 19rem;
 	}
 
+	section {
+		scroll-margin-top: 19rem;
+	}
+
+	.trial-subjects {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+		gap: 1rem;
+		margin: 2rem;
+	}
+
+	.subject-pics {
+		width: 100%;
+		margin: 0;
+	}
+
 	.sign-up-today:hover {
 		font-size: 1.4rem;
-		margin-bottom: 0.25rem;
+		margin-bottom: 0.75rem;
 	}
 
 	.social-icon:hover {
@@ -371,6 +403,11 @@ form {
 	}
 
 	.sign-up-modal {
-		width: 750px;
+		width: 80%;
+		max-width: 750px;
+		right: 0;
+		margin-left: auto;
+		margin-right: auto;
+		border-radius: 1rem;
 	}
 }

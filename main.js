@@ -5,6 +5,7 @@ const main = document.querySelector('main');
 const header = document.querySelector('header');
 const navItem = document.querySelectorAll('.nav-item');
 const html = document.querySelector('html');
+const desktopNav = document.querySelector('desktop-nav');
 
 let menuOpen = false;
 
@@ -43,10 +44,12 @@ selectPlan.forEach(item =>
 	item.addEventListener('click', () => {
 		if (!modalOpen) {
 			planModal.classList.add('open');
+			main.classList.add('open');
 			document.body.scrollIntoView();
 			modalOpen = true;
 		} else {
 			planModal.classList.remove('open');
+			main.classList.remove('open');
 			modalOpen = false;
 		}
 
@@ -110,4 +113,27 @@ if (window.innerWidth < 750) {
 	}
 }
 
-// window reload on size change
+// email contact form
+function sendEmail() {
+	Email.send({
+		Host: 'smtp.gmail.com',
+		Username: 'russelldnb@gmail.com',
+		Password: 'Mancala44',
+		To: 'russelldnb@gmail.com',
+		From: document.getElementById('contact-email').value,
+		Subject: 'Client contact request',
+		Body:
+			'Name: ' +
+			document.getElementById('name').value +
+			'<br> Email: ' +
+			document.getElementById('contact-email').value +
+			'<br> Mobile: ' +
+			document.getElementById('contact-mobile').value +
+			'<br> Message: ' +
+			document.getElementById('contact-reason').value +
+			'<br> Preferred method: ' +
+			document.getElementById('contact-option').value +
+			'<br> Best time to call: ' +
+			document.getElementById('time').value,
+	}).then(message => alert('Form submitted. Thank you for your enquiry.'));
+}

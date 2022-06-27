@@ -6,6 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="style.css" />
 		<script src="main.js" defer></script>
+		<script src="https://smtpjs.com/v3/smtp.js" defer></script>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -27,7 +28,6 @@
 				<a href="#wcidfy" class="nav-item">What Can I Do For You?</a>
 				<a href="#socials" class="nav-item">Socials</a>
 				<a href="#results" class="nav-item">Results & Reviews</a>
-				<!--<a href="#rules" class="nav-item">Rules to Life</a>-->
 				<a href="#contact" class="nav-item">Contact Me</a>
 			</nav>
 		</header>
@@ -126,8 +126,16 @@
 					Here are some before and after photos of taken of my first 4
 					trial clients. I have a very close relationship with these
 					people and the assured me they would stick to the plan and
-					in return I promised them results. <br /><br />Just from
-					these photos you can see the unbelievable transformations
+					in return I promised them results. 
+				</p>
+				<div class="trial-subjects">
+					<img class="subject-pics" src="images/elgey-before-1.jpeg" alt="Trial subject before picture">
+					<img class="subject-pics" src="images/elgey-before-2.jpeg" alt="Trial subject before picture">
+					<img class="subject-pics" src="images/elgey-after-1.jpeg" alt="Trial subject after picture">
+					<img class="subject-pics" src="images/elgey-after-2.jpeg" alt="Trial subject after picture">
+				</div>
+				<p class="main-paras">
+					Just from these photos you can see the unbelievable transformations
 					that have been achieved. This program is NOT easy and will
 					require strong will power and mental strength to begin with.
 					However, the further into the plan you get, the easier it
@@ -140,13 +148,18 @@
 			</section>
 			<section id="contact">
 				<h2 class="section-heading" id="contact-heading">Contact Me</h2>
-				<form action="" method="post" class="contact-form">
+				<form
+					action=""
+					method="post"
+					onsubmit="sendEmail(); reset(); return false;"
+					class="contact-form"
+				>
 					<p class="main-paras contact-text">
 						Please fill out the contact form below and I will get in
 						touch ASAP:
 					</p>
 					<div class="name-div details-divs">
-						<label for="name">First Name:</label>
+						<label for="name">Name:</label>
 						<input
 							type="text"
 							name="name"
@@ -155,21 +168,51 @@
 							required
 						/>
 					</div>
+					<div class="email-div details-divs">
+						<label for="contact-email">Email:</label>
+						<input
+							type="email"
+							name="email"
+							id="contact-email"
+							class="detail-input contact-input"
+							required
+						/>
+					</div>
+					<div class="mobile-div details-divs">
+						<label for="contact-mobile">Mobile:</label>
+						<input
+							type="tel"
+							name="mobile"
+							id="contact-mobile"
+							class="detail-input contact-input"
+							minlength="10"
+							maxlength="12"
+							required
+						/>
+					</div>
 					<div class="description-div details-divs">
-						<label for="description"
+						<label for="contact-reason"
 							>Reason for getting in touch:</label
 						>
 						<textarea
 							name="description"
-							id="description"
+							id="contact-reason"
 							class="detail-input contact-input"
 							cols="30"
 							rows="10"
 							required
 						></textarea>
 					</div>
+					<div class="contact-option">
+						How would you like to be contacted?
+						<div class="checkbox-div">
+							<select name="contact-option" id="contact-option" class="detail-input contact-input">
+								<option value="Email">Email</option>
+								<option value="Mobile">Mobile</option>
+							</select>
+					</div>
 					<div class="mobile-div details-divs">
-						<label for="timw">Best time to call:</label>
+						<label for="time">Best time to call:</label>
 						<input
 							type="time"
 							name="time"
@@ -181,7 +224,7 @@
 						/>
 					</div>
 					<footer class="form-footer">
-						<button class="select-plan sign-up-today">
+						<button type="submit" class="sign-up-today">
 							Submit
 						</button>
 					</footer>
@@ -190,7 +233,7 @@
 		</main>
 		<div class="sign-up-modal">
 			<div class="sign-up-header">
-				<h2 class="sign-up-heading">Choose Your Plan</h2>
+				<h2 class="sign-up-heading">Sign Up Today!</h2>
 				<span class="material-icons exit" style="font-size: 36px">
 					close
 				</span>
@@ -294,7 +337,7 @@
 					</div>
 				</div>
 				<footer class="form-footer">
-					<button class="select-plan">Sign Up</button>
+					<button class="sign-up-today">Sign Up</button>
 				</footer>
 			</form>
 		</div>
