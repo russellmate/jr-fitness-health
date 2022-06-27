@@ -116,9 +116,7 @@ if (window.innerWidth < 750) {
 // email contact form
 function sendEmail() {
 	Email.send({
-		Host: 'smtp.gmail.com',
-		Username: 'russelldnb@gmail.com',
-		Password: 'Mancala44',
+		SecureToken: 'c9b3e4a1-0954-4b15-9bc5-073ef5cbd545',
 		To: 'russelldnb@gmail.com',
 		From: document.getElementById('contact-email').value,
 		Subject: 'Client contact request',
