@@ -129,7 +129,7 @@
 					people and they assured me they would stick to the plan and
 					in return I promised them results.
 				</p>
-				<div class="trial-subjects">
+				<div class="trial-subjects" id="subject-1">
 					<img
 						class="subject-pics"
 						src="images/elgey-before-1.jpeg"
@@ -151,6 +151,8 @@
 						alt="Trial subject after picture"
 					/>
 				</div>
+				<div class="trial-subjects" id="subject-2"></div>
+				<div class="trial-subjects" id="subject-3"></div>
 				<p class="main-paras">
 					Just from these photos you can see the unbelievable
 					transformations that have been achieved. This program is NOT
@@ -166,10 +168,12 @@
 			<section id="contact">
 				<h2 class="section-heading" id="contact-heading">Contact Me</h2>
 				<form
-					action=""
+					action="send"
 					method="post"
 					onsubmit="sendEmail(); reset(); return false;"
 					class="contact-form"
+					id="contact-form"
+					enctype="multipart/form-data"
 				>
 					<p class="main-paras contact-text">
 						Please fill out the contact form below and I will get in
@@ -246,6 +250,7 @@
 					<footer class="form-footer">
 						<button
 							type="submit"
+							value="submit"
 							class="sign-up-today"
 							id="contact-form-submit"
 						>
@@ -291,38 +296,36 @@
 							required
 						/>
 					</div>
-				</div>
-				<div class="gender-div">
-					Gender:
-					<div class="checkbox-div">
-						<label for="male">Male:</label>
+					<div class="details-divs">
+						<label for="age">Age:</label>
 						<input
-							class="checkbox"
-							type="checkbox"
-							name="gender"
-							id="male"
+							type="number"
+							name="age"
+							id="age"
+							class="detail-input"
+							required
 						/>
 					</div>
-					<div class="checkbox-div">
-						<label for="female">Female:</label>
+					<div class="details-divs">
+						<label for="height">Height (cm):</label>
 						<input
-							class="checkbox"
-							type="checkbox"
-							name="gender"
-							id="female"
+							type="number"
+							name="height"
+							id="height"
+							class="detail-input"
+							required
 						/>
 					</div>
-					<div class="checkbox-div">
-						<label for="other">Other:</label>
+					<div class="details-divs">
+						<label for="weight">Weight (kg):</label>
 						<input
-							class="checkbox"
-							type="checkbox"
-							name="gender"
-							id="other"
+							type="number"
+							name="weight"
+							id="weight"
+							class="detail-input"
+							required
 						/>
 					</div>
-				</div>
-				<div class="details">
 					<div class="email-div details-divs">
 						<label for="email">Email:</label>
 						<input
@@ -344,20 +347,6 @@
 							maxlength="12"
 							required
 						/>
-					</div>
-					<div class="description-div details-divs">
-						<label for="description"
-							>Please provide a brief description of your current
-							fitness goals:</label
-						>
-						<textarea
-							name="description"
-							id="description"
-							class="detail-input"
-							cols="30"
-							rows="10"
-							required
-						></textarea>
 					</div>
 				</div>
 				<footer class="form-footer">

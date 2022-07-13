@@ -114,24 +114,28 @@ if (window.innerWidth < 750) {
 }
 
 // email contact form
-function sendEmail() {
-	Email.send({
-		SecureToken: 'c9b3e4a1-0954-4b15-9bc5-073ef5cbd545',
-		To: 'russelldnb@gmail.com',
-		From: document.getElementById('contact-email').value,
-		Subject: 'Client contact request',
-		Body:
-			'Name: ' +
-			document.getElementById('name').value +
-			'<br> Email: ' +
-			document.getElementById('contact-email').value +
-			'<br> Mobile: ' +
-			document.getElementById('contact-mobile').value +
-			'<br> Message: ' +
-			document.getElementById('contact-reason').value +
-			'<br> Preferred method: ' +
-			document.getElementById('contact-option').value +
-			'<br> Best time to call: ' +
-			document.getElementById('time').value,
-	}).then(message => alert('Form submitted. Thank you for your enquiry.'));
+const form = document.getElementById('contact-form');
+const submitEvent = form.addEventListener('submit', event => {
+	event.preventDefault();
+});
+let mail = new FormData(form);
+
+sendEmail(mail);
+
+const sendEmail = mail => {
+	fetch('/send', {
+		method: 'post',
+		body: mail,
+	}).then(response => {
+		return response.json();
+	});
+};
+
+//sql form
+function formSubmit() {
+	const firstName = document.getElementById('first-name').value;
+	const lastName = document.getElementById('last-name').value;
+	const age = document.getElementById('age').value;
+	const height = document.getElementById('height').value;
+	const weight = document.getElementById('weight').value;
 }

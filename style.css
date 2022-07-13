@@ -203,6 +203,11 @@ section {
 	text-align: left;
 	font-size: 1.4rem;
 	padding: 0 1.5rem;
+	line-height: 1.5;
+}
+
+h2 {
+	font-size: 1.8rem;
 }
 
 .socials-text,
@@ -334,7 +339,7 @@ form {
 	margin: 1.4rem 0 0 0;
 }
 
-/* desktop design */
+/* tablet design */
 @media screen and (min-width: 750px) {
 	.menu-btn {
 		display: none;
@@ -380,12 +385,19 @@ form {
 		scroll-margin-top: 19rem;
 	}
 
+	.main-paras {
+		margin-left: 15%;
+		margin-right: 15%;
+	}
+
 	.trial-subjects {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: 1fr 1fr;
 		gap: 1rem;
 		margin: 2rem;
+		margin-left: 15%;
+		margin-right: 15%;
 	}
 
 	.subject-pics {
@@ -403,12 +415,36 @@ form {
 		width: 4rem;
 	}
 
+	.contact-text {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
 	.sign-up-modal {
 		width: 80%;
 		max-width: 750px;
+		max-height: 1900px;
+		margin: 5rem 0;
 		right: 0;
 		margin-left: auto;
 		margin-right: auto;
 		border-radius: 1rem;
+	}
+}
+
+/* desktop design */
+@media screen and (min-width: 1500px) {
+	.main-paras {
+		margin-left: 25%;
+		margin-right: 25%;
+	}
+
+	.trial-subjects {
+		margin-left: 25%;
+		margin-right: 25%;
+	}
+
+	.contact-text {
+		margin: 1.5rem auto;
 	}
 }
