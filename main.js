@@ -1,141 +1,69 @@
-// hamburger menu/mobile nav
-const menuBtn = document.querySelector('.menu-btn');
-const mobileNav = document.querySelector('.mobile-nav');
-const main = document.querySelector('main');
-const header = document.querySelector('header');
-const navItem = document.querySelectorAll('.nav-item');
-const html = document.querySelector('html');
-const desktopNav = document.querySelector('desktop-nav');
+{
+	// Mobile menu
+	const toggle = document.querySelector('.menu-toggle');
+	const nav = document.getElementById('site-nav');
 
-let menuOpen = false;
+	const setMenu = open => {
+		nav.classList.toggle('open', open);
+		toggle.setAttribute('aria-expanded', String(open));
+		toggle.textContent = open ? 'Close' : 'Menu';
+	};
 
-menuBtn.addEventListener('click', () => {
-	if (!menuOpen) {
-		menuBtn.classList.add('open');
-		mobileNav.classList.add('open');
-		html.style.overflow = 'hidden';
-		menuOpen = true;
-	} else {
-		menuBtn.classList.remove('open');
-		mobileNav.classList.remove('open');
-		html.style.overflow = 'auto';
-		html.style.overflowX = 'hidden';
-		menuOpen = false;
-	}
-});
-
-navItem.forEach(item =>
-	item.addEventListener('click', () => {
-		menuBtn.classList.remove('open');
-		mobileNav.classList.remove('open');
-		main.classList.remove('open');
-		html.style.overflow = 'auto';
-		menuOpen = false;
-	})
-);
-
-// sign up modal
-const selectPlan = document.querySelectorAll('.select-plan');
-const planModal = document.querySelector('.sign-up-modal');
-
-let modalOpen = false;
-
-selectPlan.forEach(item =>
-	item.addEventListener('click', () => {
-		if (!modalOpen) {
-			planModal.classList.add('open');
-			main.classList.add('open');
-			document.body.scrollIntoView();
-			modalOpen = true;
-		} else {
-			planModal.classList.remove('open');
-			main.classList.remove('open');
-			modalOpen = false;
-		}
-
-		if (menuOpen) {
-			planModal.classList.add('open');
-			menuBtn.classList.remove('open');
-			mobileNav.classList.remove('open');
-			html.style.overflow = 'auto';
-			menuOpen = false;
-			modalOpen = true;
-		}
-	})
-);
-
-const exit = document.querySelector('.exit');
-
-exit.addEventListener('click', () => {
-	if (modalOpen) {
-		planModal.classList.remove('open');
-		main.classList.remove('open');
-		header.classList.remove('open');
-		modalOpen = true;
-	}
-});
-
-// header scroll
-const logo = document.querySelector('.title');
-
-window.onscroll = function () {
-	scrollFunction();
-};
-if (window.innerWidth < 750) {
-	function scrollFunction() {
-		if (
-			document.body.scrollTop > 100 ||
-			document.documentElement.scrollTop > 100
-		) {
-			header.style.height = '7rem';
-			main.style.marginTop = '7rem';
-			logo.style.width = '7rem';
-		} else {
-			header.style.height = '12rem';
-			main.style.marginTop = '11rem';
-			logo.style.width = '12rem';
-		}
-	}
-} else {
-	function scrollFunction() {
-		if (
-			document.body.scrollTop > 100 ||
-			document.documentElement.scrollTop > 100
-		) {
-			header.style.height = '8rem';
-			main.style.marginTop = '8rem';
-			logo.style.width = '7rem';
-		} else {
-			header.style.height = '19rem';
-			main.style.marginTop = '19rem';
-			logo.style.width = '15rem';
-		}
-	}
-}
-
-// email contact form
-const form = document.getElementById('contact-form');
-const submitEvent = form.addEventListener('submit', event => {
-	event.preventDefault();
-});
-let mail = new FormData(form);
-
-sendEmail(mail);
-
-const sendEmail = mail => {
-	fetch('/send', {
-		method: 'post',
-		body: mail,
-	}).then(response => {
-		return response.json();
+	toggle.addEventListener('click', () => setMenu(!nav.classList.contains('open')));
+	nav.addEventListener('click', e => {
+		if (e.target.closest('a')) setMenu(false);
 	});
-};
+	document.addEventListener('keydown', e => {
+		if (e.key === 'Escape' && nav.classList.contains('open')) {
+			setMenu(false);
+			toggle.focus();
+		}
+	});
 
-//sql form
-function formSubmit() {
-	const firstName = document.getElementById('first-name').value;
-	const lastName = document.getElementById('last-name').value;
-	const age = document.getElementById('age').value;
-	const height = document.getElementById('height').value;
-	const weight = document.getElementById('weight').value;
+	// Enquiry form: sends to Netlify Forms without leaving the page.
+	// Without JavaScript the form still posts normally and lands on thanks.html.
+	const form = document.querySelector('.enquiry-form');
+	const status = form.querySelector('.form-status');
+	const button = form.querySelector('button[type=submit]');
+
+	const showSent = () => {
+		form.innerHTML =
+			'<div class="sent"><h3>Enquiry sent</h3>' +
+			'<p>Thanks. Joe will be in touch soon to arrange a chat. Keep an eye on your inbox, including the junk folder.</p></div>';
+		form.setAttribute('tabindex', '-1');
+		form.focus();
+	};
+
+	form.addEventListener('submit', async e => {
+		e.preventDefault();
+		if (!form.reportValidity()) return;
+
+		// Preview copies of the page (not on Netlify) can't send anything.
+		if (document.documentElement.hasAttribute('data-preview')) {
+			status.classList.remove('error');
+			status.textContent = 'This is a preview. On the live site, this sends your enquiry to Joe.';
+			return;
+		}
+
+		button.disabled = true;
+		button.textContent = 'Sending…';
+		status.textContent = '';
+		status.classList.remove('error');
+
+		try {
+			const res = await fetch('/', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+				body: new URLSearchParams(new FormData(form)).toString(),
+			});
+			if (!res.ok) throw new Error(res.status);
+			showSent();
+		} catch {
+			button.disabled = false;
+			button.textContent = 'Send enquiry';
+			status.classList.add('error');
+			status.textContent =
+				'Your enquiry didn’t send. Check your connection and try again, or message Joe on Instagram.';
+		}
+	});
 }
