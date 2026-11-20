@@ -1,0 +1,3 @@
+# Static site with Netlify Forms, no server
+
+The first version of the site had an Express/Nodemailer server (never finished) and a PHP script writing sign-ups to MySQL (broken and open to SQL injection). The landing page now has one job: collecting Enquiries. So we replaced all of that with a single static HTML page hosted on Netlify. The Enquiry form uses Netlify Forms, which emails each submission to the Coach. This costs nothing, needs no server to maintain or secure, and keeps no database of personal details. The trade-offs: the form only works when the site is hosted on Netlify, and the only record of Enquiries is the Coach's inbox and the Netlify dashboard. If we move off Netlify, the form will need a different form service, such as Formspree.

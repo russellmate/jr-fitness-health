@@ -1,358 +1,265 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="style.css" />
-		<script src="main.js" defer></script>
-		<script src="https://smtpjs.com/v3/smtp.js" defer></script>
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;700&display=swap"
-			rel="stylesheet"
-		/>
-		<link
-			href="https://fonts.googleapis.com/icon?family=Material+Icons"
-			rel="stylesheet"
-		/>
-		<title>JR Fitness & Health Academy</title>
-	</head>
-	<body>
-		<header>
-			<div class="heading">
-				<img src="images/jrlogo.jpg" alt="Company logo" class="title" />
-			</div>
-			<nav class="desktop-nav">
-				<a href="#wcidfy" class="nav-item">What Can I Do For You?</a>
-				<a href="#socials" class="nav-item">Socials</a>
-				<a href="#results" class="nav-item">Results & Reviews</a>
-				<a href="#contact" class="nav-item">Contact Me</a>
+<html lang="en-GB">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JR Health & Fitness | 6-week online coaching with Joe</title>
+	<meta name="description" content="One-to-one online coaching for weight loss. A plan built for you, budget meal sheets, a tracking app and a call with Joe every week. £300 for 6 weeks.">
+	<meta name="theme-color" content="#1d2a3a">
+	<meta property="og:title" content="JR Health & Fitness">
+	<meta property="og:description" content="Six weeks of one-to-one online coaching with Joe. £300, then £60 a month.">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="images/jrlogo.jpg">
+	<link rel="icon" type="image/png" href="images/jr-mark.png">
+	<link rel="preload" href="fonts/archivo-variable.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<a class="skip" href="#main">Skip to content</a>
+
+	<header class="site-header">
+		<div class="header-inner">
+			<a class="brand" href="#top" aria-label="JR Health & Fitness, back to top">
+				<img src="images/jr-mark.png" alt="" width="44" height="42">
+				<span>JR Health &amp; Fitness</span>
+			</a>
+			<button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+			<nav id="site-nav" class="site-nav" aria-label="Main">
+				<a href="#included">What you get</a>
+				<a href="#how">How it works</a>
+				<a href="#results">Results</a>
+				<a href="#about">About Joe</a>
+				<a href="#pricing">Pricing</a>
+				<a href="#faq">FAQ</a>
+				<a class="btn btn-small" href="#enquire">Enquire</a>
 			</nav>
-		</header>
-		<div class="menu-btn">
-			<div class="menu-btn__burger"></div>
 		</div>
-		<nav class="mobile-nav">
-			<a href="#wcidfy" class="nav-item">What Can I Do For You?</a>
-			<a href="#socials" class="nav-item">Socials</a>
-			<a href="#results" class="nav-item">Results & Reviews</a>
-			<a href="#contact" class="nav-item">Contact Me</a>
-			<button class="select-plan sign-up-today">Sign Up Today!</button>
-		</nav>
-		<main>
-			<section id="wcidfy">
-				<h2 class="section-heading" id="wcidfy-heading">
-					What Can I Do For You?
-				</h2>
-				<p class="main-paras">
-					I will be offering people a 6 weeks minimum, specific,
-					premium plan where you can effectively change your life to
-					become the happiest, healthiest and most effective person
-					you can be.<br /><br />I will provide you with strict,
-					tailored exercise plans and an app that will record all of
-					your data so we can work on things, discuss the exercise
-					plans and change them according to what you enjoy or what we
-					feel is working best for you.<br /><br />I will provide you
-					with low budget diet sheets with great food and quick easy
-					meals that will make you feel great. You will track what
-					you're eating and drinking in the app provided so that I can
-					monitor your intake and make sure it matches exactly the
-					goals you are aiming for in order to see the best
-					results.<br /><br />There will be regular weekly calls with
-					myself to discuss your fitness and health goals, what you're
-					wanting to achieve from the program, and how you are finding
-					everything I offer. This will be a chance to ask questions
-					and let me know if there is any parts of the program that
-					you prefer or what you may be struggling with, or even just
-					to catch up with each other to discuss life and other
-					things.<br /><br />
-					I will provide a document with easy life habits and unspoken
-					rules that people have forgotten about that will make you
-					feel amazing!
-				</p>
-				<button class="select-plan sign-up-today">
-					Sign Up Today!
-				</button>
-			</section>
-			<section id="socials">
-				<h2 class="section-heading" id="socials-heading">Socials</h2>
-				<p class="main-paras socials-text">
-					Follow the links below to connect with me on socials:
-				</p>
-				<div class="social-icons">
-					<a
-						href="https://www.instagram.com/joer_health_fitness/"
-						target="_blank"
-						><img
-							src="images/instagram-11.svg"
-							alt="Instagram logo"
-							class="social-icon"
-					/></a>
-					<a
-						href="https://www.instagram.com/j.russell19/"
-						target="_blank"
-						><img
-							src="images/instagram-11.svg"
-							alt="Instagram logo"
-							class="social-icon"
-					/></a>
-					<a
-						href="https://discord.com/invite/2z567F9P"
-						target="_blank"
-						><img
-							src="images/discord-1.svg"
-							alt="Discord logo"
-							class="social-icon"
-					/></a>
-					<a
-						href="https://www.facebook.com/joseph.russell.560"
-						target="_blank"
-						><img
-							src="images/facebook-6.svg"
-							alt="Facebook logo"
-							class="social-icon"
-					/></a>
+	</header>
+
+	<main id="main">
+		<section class="hero band" id="top">
+			<div class="wrap">
+				<h1>Lose the weight.<br>Keep the habits.</h1>
+				<p class="lede">Six weeks of one-to-one online coaching with Joe. You get a plan built around you, meals that fit your budget, and a call every week to keep you on track.</p>
+				<div class="hero-actions">
+					<a class="btn" href="#enquire">Send an enquiry</a>
+					<a class="btn btn-ghost" href="#included">See what's included</a>
 				</div>
-				<button class="select-plan sign-up-today">
-					Sign Up Today!
-				</button>
-			</section>
-			<section id="results">
-				<h2 class="section-heading" id="results-heading">
-					Results & Reviews
-				</h2>
-				<p class="main-paras">
-					Here are some before and after photos of taken of my first 4
-					trial clients. I have a very close relationship with these
-					people and they assured me they would stick to the plan and
-					in return I promised them results.
-				</p>
-				<div class="trial-subjects" id="subject-1">
-					<img
-						class="subject-pics"
-						src="images/elgey-before-1.jpeg"
-						alt="Trial subject before picture"
-					/>
-					<img
-						class="subject-pics"
-						src="images/elgey-before-2.jpeg"
-						alt="Trial subject before picture"
-					/>
-					<img
-						class="subject-pics"
-						src="images/elgey-after-1.jpeg"
-						alt="Trial subject after picture"
-					/>
-					<img
-						class="subject-pics"
-						src="images/elgey-after-2.jpeg"
-						alt="Trial subject after picture"
-					/>
+
+				<figure class="habit-chart" aria-labelledby="habit-caption">
+					<ol class="bars">
+						<li style="--h:22%"><span class="bar"><span class="tag">Toughest</span></span><span class="wk">Week 1</span></li>
+						<li style="--h:36%"><span class="bar"></span><span class="wk">Week 2</span></li>
+						<li style="--h:50%"><span class="bar"></span><span class="wk">Week 3</span></li>
+						<li style="--h:64%"><span class="bar"></span><span class="wk">Week 4</span></li>
+						<li style="--h:80%"><span class="bar"></span><span class="wk">Week 5</span></li>
+						<li style="--h:100%" class="last"><span class="bar"><span class="tag">Habit</span></span><span class="wk">Week 6</span></li>
+					</ol>
+					<figcaption id="habit-caption">It isn't easy at the start. It gets easier every week as it becomes habit.</figcaption>
+				</figure>
+			</div>
+		</section>
+
+		<section class="band" id="included">
+			<div class="wrap split">
+				<div class="split-head">
+					<h2>What you get</h2>
+					<p>The 6-Week Program is one package with no add-ons. Joe builds everything around your goals and changes it as you go, based on what's working and what you enjoy.</p>
 				</div>
-				<div class="trial-subjects" id="subject-2"></div>
-				<div class="trial-subjects" id="subject-3"></div>
-				<p class="main-paras">
-					Just from these photos you can see the unbelievable
-					transformations that have been achieved. This program is NOT
-					easy and will require strong will power and mental strength
-					to begin with. However, the further into the plan you get,
-					the easier it becomes as it starts to become a habit. The
-					work is hard but the results are 1 million times worth it!
-				</p>
-				<button class="select-plan sign-up-today">
-					Sign Up Today!
-				</button>
-			</section>
-			<section id="contact">
-				<h2 class="section-heading" id="contact-heading">Contact Me</h2>
-				<form
-					action="send"
-					method="post"
-					onsubmit="sendEmail(); reset(); return false;"
-					class="contact-form"
-					id="contact-form"
-					enctype="multipart/form-data"
-				>
-					<p class="main-paras contact-text">
-						Please fill out the contact form below and I will get in
-						touch ASAP:
-					</p>
-					<div class="name-div details-divs">
-						<label for="name">Name:</label>
-						<input
-							type="text"
-							name="name"
-							id="name"
-							class="detail-input contact-input"
-							required
-						/>
+				<ul class="inclusions">
+					<li>
+						<h3>A workout plan built for you</h3>
+						<p>Clear, structured sessions set to your level. You and Joe adjust them each week based on how you're getting on.</p>
+					</li>
+					<li>
+						<h3>A tracking app</h3>
+						<p>Log your workouts, food and drink in one place, so Joe can see your progress and keep your intake matched to your goal.</p>
+					</li>
+					<li>
+						<h3>Budget meal sheets</h3>
+						<p>Quick, easy meals made from everyday food that won't cost a fortune.</p>
+					</li>
+					<li>
+						<h3>A call with Joe every week</h3>
+						<p>Talk through your progress, ask questions, and say what's working and what's a struggle.</p>
+					</li>
+					<li>
+						<h3>The habits guide</h3>
+						<p>Simple daily habits that make sticking to the plan easier, and keep the results going after six weeks.</p>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="band band-tint" id="how">
+			<div class="wrap">
+				<h2>How it works</h2>
+				<ol class="steps">
+					<li>
+						<h3>Send an enquiry</h3>
+						<p>Tell Joe your goal and a little about your exercise history. It takes about a minute.</p>
+					</li>
+					<li>
+						<h3>Have a chat with Joe</h3>
+						<p>Joe gets back to you to talk through what you want to achieve and whether the Program is right for you.</p>
+					</li>
+					<li>
+						<h3>Start your six weeks</h3>
+						<p>Get your plan, meal sheets and app set up, and book in your first weekly call.</p>
+					</li>
+				</ol>
+			</div>
+		</section>
+
+		<section class="band band-dark" id="results">
+			<div class="wrap story">
+				<div class="story-photos">
+					<figure>
+						<img src="images/james-before.jpg" alt="James before the Program, side-on mirror photo" width="720" height="883" loading="lazy">
+						<figcaption>Before</figcaption>
+					</figure>
+					<figure>
+						<img src="images/james-after.jpg" alt="James after the Program, front-on mirror photo" width="720" height="883" loading="lazy">
+						<figcaption>After</figcaption>
+					</figure>
+				</div>
+				<div class="story-text">
+					<h2>James's story</h2>
+					<p class="story-result"><span class="ph">[James's result, for example the weight lost and over how long]</span></p>
+					<blockquote>
+						<p><span class="ph">[A sentence or two from James about what the Program was like]</span></p>
+						<footer>James</footer>
+					</blockquote>
+					<p class="small">Photos shared with James's permission. Individual results vary.</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="band" id="about">
+			<div class="wrap about">
+				<div class="about-photo ph-box" role="img" aria-label="Photo of Joe to come">
+					<img src="images/jr-mark.png" alt="" width="120" height="116">
+					<span>[Photo of Joe]</span>
+				</div>
+				<div class="about-text">
+					<h2>About Joe</h2>
+					<p>I'm Joe Russell, the coach behind JR Health &amp; Fitness. <span class="ph">[A few lines about why Joe started coaching, his own training, and the kind of people he likes working with.]</span></p>
+					<p class="quals"><strong>Qualifications:</strong> <span class="ph">[qualification]</span></p>
+				</div>
+			</div>
+		</section>
+
+		<section class="band band-tint" id="pricing">
+			<div class="wrap price-wrap">
+				<h2>Pricing</h2>
+				<div class="price-card">
+					<p class="price"><span class="amount">£300</span> <span class="per">for your first 6 weeks</span></p>
+					<p class="then">Then £60 a month to keep going. Cancel anytime.</p>
+					<p>Includes everything in <a href="#included">What you get</a>: your workout plan, the tracking app, meal sheets, a weekly call and the habits guide.</p>
+					<a class="btn" href="#enquire">Send an enquiry</a>
+				</div>
+			</div>
+		</section>
+
+		<section class="band" id="faq">
+			<div class="wrap faq-wrap">
+				<h2>Questions</h2>
+				<div class="faq">
+					<details>
+						<summary>How long is the Program?</summary>
+						<p>Six weeks to start, for £300. After that you can carry on for £60 a month and cancel anytime.</p>
+					</details>
+					<details>
+						<summary>I've never really trained. Is this for me?</summary>
+						<p>Yes. Your plan is written for your level, and Joe adjusts it every week. Plenty of people start from nothing.</p>
+					</details>
+					<details>
+						<summary>Will it be hard?</summary>
+						<p>Honestly, the first couple of weeks take willpower. It gets easier the further in you get, because the plan turns into habit.</p>
+					</details>
+					<details>
+						<summary>Do I have to follow a strict diet?</summary>
+						<p>No crash diets. You get budget meal sheets with quick, easy meals, and you log what you eat in the app so Joe can keep it matched to your goal.</p>
+					</details>
+					<details>
+						<summary>What happens on the weekly call?</summary>
+						<p>You and Joe go through your week: progress, what's working, what's a struggle, and any questions. Joe changes your plan if something needs to.</p>
+					</details>
+					<details>
+						<summary>Do I need a gym membership?</summary>
+						<p><span class="ph">[Joe to confirm: gym, home, or either]</span></p>
+					</details>
+				</div>
+			</div>
+		</section>
+
+		<section class="band band-dark" id="enquire">
+			<div class="wrap enquire">
+				<div class="enquire-head">
+					<h2>Send an enquiry</h2>
+					<p>Tell Joe a little about yourself and he'll get back to you to arrange a chat. There's no commitment to sign up.</p>
+				</div>
+
+				<form class="enquiry-form" name="enquiry" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="bot-field">
+					<input type="hidden" name="form-name" value="enquiry">
+					<p class="hidden-field"><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+
+					<div class="field">
+						<label for="f-name">Name</label>
+						<input id="f-name" name="name" type="text" autocomplete="name" required>
 					</div>
-					<div class="email-div details-divs">
-						<label for="contact-email">Email:</label>
-						<input
-							type="email"
-							name="email"
-							id="contact-email"
-							class="detail-input contact-input"
-							required
-						/>
+					<div class="field">
+						<label for="f-email">Email</label>
+						<input id="f-email" name="email" type="email" autocomplete="email" required>
 					</div>
-					<div class="mobile-div details-divs">
-						<label for="contact-mobile">Mobile:</label>
-						<input
-							type="tel"
-							name="mobile"
-							id="contact-mobile"
-							class="detail-input contact-input"
-							minlength="10"
-							maxlength="12"
-							required
-						/>
+					<div class="field">
+						<label for="f-phone">Phone <span class="opt">(optional)</span></label>
+						<input id="f-phone" name="phone" type="tel" autocomplete="tel">
 					</div>
-					<div class="description-div details-divs">
-						<label for="contact-reason"
-							>Reason for getting in touch:</label
-						>
-						<textarea
-							name="description"
-							id="contact-reason"
-							class="detail-input contact-input"
-							cols="30"
-							rows="10"
-							required
-						></textarea>
-					</div>
-					<div class="contact-option details-divs">
-						How would you like to be contacted?
-						<select
-							name="contact-option"
-							id="contact-option"
-							class="detail-input contact-input"
-						>
-							<option value="Email">Email</option>
-							<option value="Mobile">Mobile</option>
+					<div class="field">
+						<label for="f-goal">Main goal</label>
+						<select id="f-goal" name="goal" required>
+							<option value="Lose weight">Lose weight</option>
+							<option value="Get stronger">Get stronger</option>
+							<option value="Feel healthier">Feel healthier</option>
+							<option value="Other">Other</option>
 						</select>
 					</div>
-					<div class="mobile-div details-divs">
-						<label for="time">Best time to call:</label>
-						<input
-							type="time"
-							name="time"
-							id="time"
-							class="detail-input contact-input"
-							minlength="10"
-							maxlength="12"
-							required
-						/>
+					<div class="field">
+						<label for="f-history">Exercise history</label>
+						<select id="f-history" name="exercise-history" required>
+							<option value="" disabled selected>Choose one</option>
+							<option value="Never really trained">Never really trained</option>
+							<option value="Used to, fell off">Used to, fell off</option>
+							<option value="Train now, not seeing results">Train now, not seeing results</option>
+						</select>
 					</div>
-					<footer class="form-footer">
-						<button
-							type="submit"
-							value="submit"
-							class="sign-up-today"
-							id="contact-form-submit"
-						>
-							Submit
-						</button>
-					</footer>
+					<div class="field">
+						<label for="f-message">Anything else Joe should know? <span class="opt">(optional)</span></label>
+						<textarea id="f-message" name="message" rows="4" placeholder="Questions, injuries, what you've tried before"></textarea>
+					</div>
+					<p class="privacy-line">Joe only uses your details to reply to your enquiry. See the <a href="privacy.html">privacy notice</a>.</p>
+					<button class="btn" type="submit">Send enquiry</button>
+					<p class="form-status" role="status" aria-live="polite"></p>
 				</form>
-			</section>
-		</main>
-		<div class="sign-up-modal">
-			<div class="sign-up-header">
-				<h2 class="sign-up-heading">Sign Up Today!</h2>
-				<span class="material-icons exit" style="font-size: 36px">
-					close
-				</span>
 			</div>
-			<form action="form.php" method="post" class="sign-up-form">
-				<h3 class="form-header">
-					Want to become the best version of yourself? Get healthy,
-					happy and fit in just 6 weeks! <br /><br />
-					Schedule a call with me to discuss your goals and plans
-					regarding fitness and health, and let me help you become a
-					BEAST!
-				</h3>
-				<div class="details">
-					<div class="name-div details-divs">
-						<label for="first-name">First Name:</label>
-						<input
-							type="text"
-							name="first-name"
-							id="first-name"
-							class="detail-input"
-							required
-						/>
-					</div>
-					<div class="name-div details-divs">
-						<label for="last-name">Last Name:</label>
-						<input
-							type="text"
-							name="last-name"
-							id="last-name"
-							class="detail-input"
-							required
-						/>
-					</div>
-					<div class="details-divs">
-						<label for="age">Age:</label>
-						<input
-							type="number"
-							name="age"
-							id="age"
-							class="detail-input"
-							required
-						/>
-					</div>
-					<div class="details-divs">
-						<label for="height">Height (cm):</label>
-						<input
-							type="number"
-							name="height"
-							id="height"
-							class="detail-input"
-							required
-						/>
-					</div>
-					<div class="details-divs">
-						<label for="weight">Weight (kg):</label>
-						<input
-							type="number"
-							name="weight"
-							id="weight"
-							class="detail-input"
-							required
-						/>
-					</div>
-					<div class="email-div details-divs">
-						<label for="email">Email:</label>
-						<input
-							type="email"
-							name="email"
-							id="email"
-							class="detail-input"
-							required
-						/>
-					</div>
-					<div class="mobile-div details-divs">
-						<label for="mobile">Mobile:</label>
-						<input
-							type="tel"
-							name="mobile"
-							id="mobile"
-							class="detail-input"
-							minlength="10"
-							maxlength="12"
-							required
-						/>
-					</div>
-				</div>
-				<footer class="form-footer">
-					<button class="sign-up-today">Sign Up</button>
-				</footer>
-			</form>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<div class="wrap footer-inner">
+			<a class="brand" href="#top">
+				<img src="images/jr-mark.png" alt="" width="36" height="35">
+				<span>JR Health &amp; Fitness</span>
+			</a>
+			<a class="insta" href="https://www.instagram.com/joer_health_fitness/" rel="noopener">
+				<img src="images/instagram-11.svg" alt="" width="22" height="22">
+				@joer_health_fitness on Instagram
+			</a>
+			<p class="footer-legal"><a href="privacy.html">Privacy notice</a> <span>© 2026 JR Health &amp; Fitness</span></p>
 		</div>
-	</body>
+	</footer>
+
+	<script src="main.js" defer></script>
+</body>
 </html>
